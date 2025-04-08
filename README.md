@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Setup Guide
 
-## Getting Started
+This README file provides detailed instructions to set up and run the **Chatbot** and **Web Application** projects. Follow the steps below to ensure proper configuration.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Chatbot Setup
+
+### 1. Navigate to the Chatbot Folder
+``
+cd chatbot
+``
+
+
+### 2. Create a Virtual Environment
+You can use either Conda or `venv` to create a virtual environment for the project.
+
+### 3. Activate the Created Environment
+Activate the virtual environment:
+
+For Conda
+```
+conda activate <env_name>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For venv (Linux/macOS)
+```
+source <env_name>/bin/activate
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For venv (Windows)
+```
+<env_name>\Scripts\activa
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+### 4. Install Required Dependencies
+Install all necessary dependencies listed in the `requirements.txt` file:
 
-To learn more about Next.js, take a look at the following resources:
+```
+pip install -r requirements.txt
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. Run the Application
+Start the chatbot application using:
+```
+python app.py
+```
+Chatbot will run on 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Web Application Setup
+
+### 1. Install Dependencies
+Use `pnpm` to install all required dependencies:
+
+```
+pnpm install
+```
+
+### 2. Create Environment Files
+- **Create `env.local` File**: Add environment variables specific to your local development environment.
+- **Create `.env` File**: Add general environment variables required for the application.
+- Follow ``env.local.example`` and ``env.example`` file format.
+
+
+### 3. Start Development Server
+Run the development server using:
+
+```
+pnpm run dev
+```
+
+---
+
+## Notes
+
+- Ensure that you have Python, Conda, Node.js, and `pnpm` installed on your system.
+- Verify that all environment variables are correctly added to the respective files (`env.local` and `.env`) before running the applications.
+- For production deployment, additional configuration may be required.
+
+---
+All Rights Reserved.
+
